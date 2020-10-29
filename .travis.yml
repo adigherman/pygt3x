@@ -66,7 +66,7 @@ before_install:
   - export PACKAGE_NAME=`package_name`
   - echo "Package Name is $PACKAGE_NAME"
   - setup_python 3.6 false ;
-  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install python3.6 ; fi
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get update ; sudo apt-get install python3.6 ; fi
   - install_python_requirements ;
   - R CMD javareconf ;
 after_success: dump_logs
