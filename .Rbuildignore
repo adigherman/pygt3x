@@ -8,3 +8,5 @@
 ^data-raw$
 ^requirements\.txt$
 ^inst/gt3x/\.github$
+^DESCRIPTION\.bak$
+^\./\.travis\.yml\.bak$
