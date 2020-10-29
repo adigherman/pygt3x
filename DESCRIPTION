@@ -16,12 +16,9 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports: reticulate, R.utils, tools, lubridate, dplyr, tibble, zoo,
         utils, readr
-Suggests: 
-    testthat,
-    read.gt3x (>= 0.3.0),
-    covr
+Suggests: testthat, read.gt3x (>= 0.3.0), covr
 Depends: R (>= 2.10)
+biocViews:
 Repository: Oslerinhealth
 Remotes:  
     muschellij2/read.gt3x
-biocViews: 
