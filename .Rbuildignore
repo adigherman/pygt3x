@@ -10,3 +10,4 @@
 ^inst/gt3x/\.github$
 ^DESCRIPTION\.bak$
 ^\./\.travis\.yml\.bak$
+^\./appveyor\.yml\.bak$
