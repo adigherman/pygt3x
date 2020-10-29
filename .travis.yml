@@ -21,11 +21,7 @@ os:
 osx_image: xcode9.4
 services: xvfb
 r:
-  - 3.4
-  - 3.5
-  - 3.6
   - release
-  - devel
 jobs:
   allow_failures:
     - r: devel
@@ -70,6 +66,7 @@ before_install:
   - export PACKAGE_NAME=`package_name`
   - echo "Package Name is $PACKAGE_NAME"
   - setup_python 3.6 false ;
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; sudo apt-get install python3.6 ; fi
   - install_python_requirements ;
   - R CMD javareconf ;
 after_success: dump_logs
