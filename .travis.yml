@@ -33,7 +33,7 @@ env:
     - R_REMOTES_NO_ERRORS_FROM_WARNINGS=true
     - _R_CHECK_FORCE_SUGGESTS_=false
     - CACHE_NAME="${TRAVIS_OS_NAME}-R-${TRAVIS_R_VERSION}"
-    - TRAVIS_PYTHON_VERSION=3.6
+    - TRAVIS_PYTHON_VERSION=3.9
 r_check_args: --as-cran --install-args=--build
 before_install:
   - if [ "$TRAVIS_DIST" = "trusty" ]; then sudo apt-get -y install libgsl0ldbl ; fi
@@ -67,8 +67,8 @@ before_install:
   - export PACKAGE_NAME=`package_name`
   - echo "Package Name is $PACKAGE_NAME"
 #  - setup_python 3.6 false ;
-  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew install python@3.6 ; brew link python@3.6 ; fi
-  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository --yes ppa:deadsnakes/ppa ; sudo apt-get update ; sudo apt-get install python3.6 ; fi
+  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew link python@3.9 ; fi
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository --yes ppa:deadsnakes/ppa ; sudo apt-get update ; sudo apt-get install python3.9 ; fi
   - python3 --version ;
   - install_python_requirements ;
   - R CMD javareconf ;
